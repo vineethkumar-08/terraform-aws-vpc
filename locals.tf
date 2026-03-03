@@ -5,7 +5,7 @@ locals {
         Terraform = "true"
     }
 
-    vpc_final_tags =  merg (
+    vpc_final_tags =  merge (
         local.common_tags,
         {
         name = "${var.project}-${var.environment }"
