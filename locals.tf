@@ -14,11 +14,21 @@ locals {
 
   )
 
-  igw_tags = merge(
+  igw_final_tags = merge(
     local.common_tags,
     {
         name = "${var.project}-${var.environment }"
-    }
+    },
+    var.igw_tags
+    
+    )
+
+    subnet_final_tags = merge(
+    local.common_tags,
+    {
+        name = "${var.project}-${var.environment }"
+    },
+    var.subnet_tags
     
     )
 
