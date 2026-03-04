@@ -23,12 +23,6 @@ locals {
     
     )
 
-    subnet_final_tags = merge(
-    local.common_tags,
-    {
-        name = "${var.project}-${var.environment }"
-    },
-  
-    )
+    az_names = slice(data.aws_availability_zones.available.names, 0,2)
 
 }
