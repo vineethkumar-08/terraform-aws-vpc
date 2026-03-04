@@ -40,7 +40,7 @@ variable "private_subnet_cidrs"{
 
 
 
-variable "subnet_tags"{
-    type = map
-    default = {}
-}
+# variable "subnet_tags"{
+#     type = map
+#     default = {}
+# }

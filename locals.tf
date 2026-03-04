@@ -23,13 +23,12 @@ locals {
     
     )
 
-    # subnet_final_tags = merge(
-    # local.common_tags,
-    # {
-    #     name = "${var.project}-${var.environment }"
-    # },
-    # var.subnet_tags
-    
-    # )
+    subnet_final_tags = merge(
+    local.common_tags,
+    {
+        name = "${var.project}-${var.environment }"
+    },
+  
+    )
 
 }
